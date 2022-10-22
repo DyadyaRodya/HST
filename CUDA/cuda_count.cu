@@ -90,8 +90,8 @@ int main(int argc, char* argv[]) {
     std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
 
-    dim3 grid(M, 1, 1);
-    dim3 block(N, 1, 1);
+    dim3 grid(M/ THREADS + 1, 1, 1);
+    dim3 block(THREADS, 1, 1);
     vector_count <<<grid, block >>> (data, res, M, N);
     cudaDeviceSynchronize();
 

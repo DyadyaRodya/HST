@@ -18,6 +18,6 @@
 ./generator.o MB N output_file
 ```
 
-Зависимость:
+Зависимость (для вариантов MPI и MPI+CUDA выполнено распределение на 4 процесса):
 
 ![изображение](https://user-images.githubusercontent.com/55759699/197321067-d3464c3d-9f58-42e8-b61d-1598b7bde9d8.png)
